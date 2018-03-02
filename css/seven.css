@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html {
+    background: url("../images/tickets.jpg") no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    font-family:'Montserrat', sans-serif;
+}
+
+#page {
+    background-color:rgba(227,47,48,.4);
+    margin:0 auto 300px auto;
+    width:60%;
+    padding:1em;
+}
+
+h1 {
+    text-align:center;
+    font-size:3em;
+    font-weight:900;
+    color:#fff;
+}
+
+p {
+    color:#fff;
+    text-align:center;
+    font-size:1.5em;
+    font-weight:700;
+}
+
+a {
+    color:#fff;
+    text-align:center;
+}
+
+a.link {
+    color:#E32F30;
+    font-size:1em;
+    font-weight:300;
+}
+
+.shows {
+    padding:.5em;
+}
+
+ul {
+    padding:1em;
+}
+
+li {
+    background-color:rgba(255,255,255,.7);
+    color:#451B0C;
+    padding:1em;
+    font-size:1em;
+    list-style-type:none;
+    word-wrap:break-word;
+}
+
+.title {
+    background-color:rgba(255,255,255,.7);
+    color:#451B0C;
+    font-style:italic;
+    font-size:1em;
+    font-weight:400;
+}
+
+.on {    
+    background-color:#E32F30;
+    color:#fff;
+    font-style:italic;
+    font-size:1em;
+    font-weight:900;
+}
+
+.playwright, .director, .tagline {
+    display:none;
+}
+
+button {
+    margin:auto;
+    display:block;
+    padding:1em;
+    background-color:#fff;
+    color:#E32F30;
+    font-family:'Montserrat', sans-serif;
+    font-size:1em;
+    font-weight:800;
+}

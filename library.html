@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Library</title>
+        <link rel="stylesheet" href="css/january10.css">
+    </head>
+    
+    <body>
+        <h2>Smith Library</h2>
+        <h3>Book Inventory</h3>
+        
+        <p id="book1"></p>
+        <p id="book2"></p>
+        
+        <script>
+            //create object constructor template
+            function Book (title, author, checkedOut, availableCopies){
+                
+                this.title = title;
+                this.author = author;
+                this.checkedOut = checkedOut;
+                this.availableCopies = availableCopies;
+                this.checkAvailableCopies = function(){
+                    return this.availableCopies - this.checkedOut;                
+                };
+            }
+            //create two instance of the Book object
+            //we pass arguments to the constructor
+            var book1 = new Book ("The Princess Bride", "William Goldman", 10, 15);
+            var book2 = new Book ("Confessions of a Dangerous Mind", "Chuck Barris", 15, 15);
+            
+            //call checkAvailableCopes method and properties
+            
+            var book1Info = book1.title + ",  " + book1.author + ";" + " Copies available: " + book1.checkAvailableCopies();
+            var book2Info = book2.title + ",  " + book2.author + ";" + " Copies available: " + book2.checkAvailableCopies();
+            
+            //display/update in HTML
+            
+            var elBook1 = document.getElementById('book1');
+            elBook1.textContent = book1Info;
+            
+            var elBook2 = document.getElementById('book2');
+            elBook2.textContent = book2Info;            
+            
+        </script>
+    </body>
+</html>

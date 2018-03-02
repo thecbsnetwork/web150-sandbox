@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User login name request</title>
+    </head>
+    
+    <body>
+        <h1>User Login Name</h1>
+        <div id="info"></div>
+    <script>
+        //prompt the user for their first name
+            var firstName = prompt("Enter your first name", "First Name" );
+        //prompt the user for their last name
+            var lastName = prompt("Enter your last name", "Last Name" );
+        //find first initial of first name and substring of first four characters of last name that is lowercase
+            var username1 = firstName.charAt(0) + lastName.substr(0, 4);
+        
+            var username = username1.toLowerCase();
+            
+        //create a variable called el to hold the element whose id attribute has a value of output
+            var el = document.getElementById('info');
+        //write the username into that element
+            el.innerHTML = username;
+            
+        
+    </script>
+    </body>
+
+</html>

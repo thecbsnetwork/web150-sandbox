@@ -1,0 +1,66 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Miles Per Gallon Calculator</title>
+        <style>
+            html {
+                font-family: sans-serif;
+            }
+            
+            #page {
+                margin:auto;
+                max-width:300px;
+            }
+            
+            section {
+                border: 2px solid purple;
+                padding: 10px;
+            }
+            
+            #feedback {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="page">
+            <h1>Calculate Miles per Gallon (MPG)</h1>
+            <section>
+            <label for="miles">Enter miles driven: </label>
+            <input type="text" id="miles" /><br />
+            <label for="gas">Enter gallons of gas used: </label>
+            <input type="text" id="gas" /><br />
+            <label for="mpg">Miles Per Gallon: </label>
+            <input type="text" id="mpg" disabled="disabled" />
+            <br /><br />
+            <input type="button" id="calculate" value="Calculate MPG"><br />
+            <div id="feedback"></div>
+            </section>
+        </div>
+    <script>
+        var $ = function (id) {
+            return document.getElementById(id);
+        }
+        
+        var calculateMpg = function () {
+            var miles = parseFloat($("miles").value);
+            var gas = parseFloat($("gas").value);
+            
+            if (isNaN(miles) || isNaN(gas)) {
+                var elMsg = document.getElementById("feedback");
+                elMsg.textContent = "Please enter a number.";
+            }
+            else {
+                var mpg = miles / gas;
+                $("mpg").value = mpg.toFixed(1);
+            }
+        }
+        
+        window.onload = function () {
+            $("calculate").onclick = calculateMpg;
+            $("miles").focus();
+        }
+       
+    </script>
+    </body>
+</html>

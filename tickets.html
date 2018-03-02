@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tickets</title>
+    
+    </head>
+    
+    <body>
+        <h2>Annex Theatre</h2>
+        <h3>Tickets</h3>
+        
+        <p id="show1"></p>
+        <p id="show2"></p>
+        
+        <script>
+            //create Show objects templates
+            function Show (title, director, date, time, ticketsSold, availableTickets){
+                
+                this.title = title;
+                this.director = director;
+                this.date = date;
+                this.time = time;
+                this.ticketsSold = ticketsSold;
+                this.availableTickets = availableTickets;
+                this.checkAvailableTickets = function(){
+                    return this.availableTickets - this.ticketsSold;
+                };
+            }
+            //create descriptions of Show objects
+            var show1 = new Show ("Row Yr Boat", "Catherine Blake Smith", "February 9", "7:30 pm", 65, 99);
+            var show2 = new Show ("Safe Space", "Kyleigh Archer", "February 13", "7:30 pm", 35, 99);
+            
+            //call checkAvailableTickets method and properties
+            
+            var show1Info = show1.title + " by " + show1.director + " on " + show1.date + " at " + show1.time + " - " + " Tickets available: " + show1.checkAvailableTickets();
+            var show2Info = show2.title + " by " + show2.director + " on " + show2.date + " at " + show2.time + " - " + " Tickets available: " + show2.checkAvailableTickets();
+            
+            //display/update in HTML
+            
+            var elShow1 = document.getElementById('show1');
+            elShow1.textContent = show1Info;
+
+            var elShow2 = document.getElementById('show2');
+            elShow2.textContent = show2Info;        
+        
+        </script>
+    </body>
+</html>

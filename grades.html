@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grades</title>
+    </head>
+    <body>
+        <h1>Click the button to enter a score.</h1>
+        <!--include a button to refresh the page-->
+        <input type="button" value="Click" onClick="window.location.href=window.location.href">
+        <script>
+            //prompt the user to enter a score
+            var score = prompt('Enter a grade value 1 through 100 to receive a letter grade result.');
+            
+            //alert the user with a grade based on the score
+            if (score <= 60) {
+                alert ('Number grade = ' + score + ' Letter grade = F');
+            } else if (score <= 67) {
+                alert ('Number grade = ' + score + ' Letter grade = D');
+            } else if (score <= 79) {
+                alert ('Number grade = ' + score + ' Letter grade = C');
+            } else if (score <= 87) {
+                alert ('Number grade = ' + score + ' Letter grade = B');
+            } else if (score <= 100) {
+                alert ('Number grade = ' + score + ' Letter grade = A');
+            }
+        
+        </script>
+    </body>
+
+</html>

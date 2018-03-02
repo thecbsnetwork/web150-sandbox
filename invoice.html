@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Invoice Calculator</title>
+    </head>
+    
+    <body>
+        <h3>Invoice Calculator</h3>
+        <h3 id="input"></h3>
+        <h3 id="output"></h3>
+        <script>
+        
+        //ask the user for their invoice amount input
+            var num1 = parseFloat(prompt("Enter invoice amount:"))
+        //calculate tax at 10%
+            var tax = .10;
+        //calculate total
+            let total = num1 + (num1 * tax);
+        //display input
+            document.getElementById("input").innerHTML = "You entered: $" + num1;
+        //display total
+            document.getElementById("output").innerHTML = "Your total at 10% tax rate is: $" + total.toFixed(2);
+            
+        </script>
+    </body>
+
+</html>
